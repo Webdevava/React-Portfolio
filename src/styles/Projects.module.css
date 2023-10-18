@@ -1,0 +1,9 @@
+.project_container{
+  overflow-x: hidden;
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
