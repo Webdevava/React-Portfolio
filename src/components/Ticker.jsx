@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Marquee from 'react-fast-marquee';
 import styles from '../styles/Ticker.module.css';
 
 const techNames = [
@@ -21,42 +22,24 @@ const techNames = [
 ];
 
 function Ticker() {
-  const [tickerItems, setTickerItems] = useState([]);
-
-  useEffect(() => {
-    const animationDelay = 2000; // Delay between each item change
-    const loopDelay = animationDelay * techNames.length; // Total delay for a full loop
-
-    const updateTicker = () => {
-      const items = [];
-      for (let i = 0; i < techNames.length * 2; i++) {
-        items.push(techNames[i % techNames.length]);
-      }
-      setTickerItems(items);
-    };
-
-    updateTicker(); // Initial update
-    const tickerInterval = setInterval(updateTicker, loopDelay);
-
-    return () => {
-      clearInterval(tickerInterval);
-    };
-  }, []);
-
   return (
     <div className={styles.ticker_container}>
-      <div className={styles.ticker}>
-        {tickerItems.map((name, index) => (
+      <Marquee
+      className={styles.Marquee}
+        gradient={false} // Set to true if you want a gradient effect
+        speed={75} // Adjust the speed as needed
+        direction="left" // Change to "right" for right-to-left scrolling
+        style={{ width: '100%',height: '100%' }}
+      >
+        {techNames.map((name, index) => (
           <span
             key={index}
-            className={`${styles.ticker_item} ${
-              index === techNames.length ? styles.active : ''
-            }`}
+            className={styles.ticker_item}
           >
             {name}
           </span>
         ))}
-      </div>
+      </Marquee>
     </div>
   );
 }

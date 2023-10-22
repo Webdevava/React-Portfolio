@@ -8,6 +8,10 @@
     border-right: none;
 
   }
+  .Marquee{
+    overflow: hidden;
+
+  }
   
   .ticker {
     width: 100%;
@@ -23,6 +27,8 @@
     color: #d65a31;
     background-color: #0e1833;
     border: 2px solid #d65a31;
+    border-left: none;
+    border-right: none;
   }
   
   .ticker_item {
