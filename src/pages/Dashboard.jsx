@@ -46,7 +46,7 @@ const Dashboard = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://portfolio-backend-pomn.onrender.com/api/login",
+        "http://localhost:5000/api/login",
         { email, password },
         { withCredentials: true }
       );
@@ -62,7 +62,7 @@ const Dashboard = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://portfolio-backend-pomn.onrender.com/api/project",
+        "http://localhost:5000/api/project",
         { title, desc, date, image, service, url, repo },
         { withCredentials: true }
       );
