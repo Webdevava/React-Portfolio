@@ -17,7 +17,7 @@ const HomePage = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get('https://portfolio-backend-pomn.onrender.com/api/project')
+    axios.get('http://localhost:5000/api/project')
       .then((response) => {
         setProjects(response.data.projects);
         setIsLoading(false);
