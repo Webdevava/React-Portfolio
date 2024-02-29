@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: marby;
+  src: url("./assets/Syne-VariableFont_wght.ttf");
+}
+
+:root{
+  --bg:#0f0f0f;
+  --fn:#f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--fn);
+  background: var(--bg);
+  font-family: marby;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+
+
+.project {
+
+  .projectBtn{
+    top: 50%;
+    left: 0px;
+    scale: 0.5;
+    background-color: var(--bg);
+    color: var(--fn);
+    transition: all .25s ease;
+
+  }
+  .imgContainer{
+    flex: 1;
+  }
+  .infoContainer{
+    flex: 1;
+  }
+  
+
+}
+
+.project:hover{
+
+  .projectBtn{
+    top: 50%;
+    left: -30px;
+    scale: 1;
+
+    background-color: var(--fn);
+    color: var(--bg);
+    transition: all .25s ease;
+  }
+}
+
+.bg-radial-pattern {
+  /* background-color: #313131; */
+  background-image: radial-gradient(rgba(136, 136, 136, 0.171) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #494949;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.connectBtn {
+  span {
+    background-color:var(--bg);
+    color: var(--fn);
+    transition: scale 0.5s ease;
+
+  }
+  h1 {
+    text-align: start;
+    margin-left: 1.5rem;
+    letter-spacing: normal;
+    transition: all 0.25s ease;
+  }
+}
+.connectBtn:hover {
+  span {
+
+    background-color:var(--fn);
+    color: var(--bg);
+    scale: 1.15;
+    transition: scale 0.5s ease;
+  }
+  h1 {
+    margin-left: 2.5rem;
+    letter-spacing: 2px;
+
+    transition: all 0.25s ease;
+  }
+}
+
+
+.active {
+  background-color: #F0F0F0;
+  color: #0f0f0f;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 2s infinite;
+}
