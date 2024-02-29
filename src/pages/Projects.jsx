@@ -11,7 +11,7 @@ const Projects = () => {
 
   useEffect(() => {
     axios
-      .get("https://registration-form-uyc4.onrender.com/api/project/")
+      .get("https://portfolio-backend-pomn.onrender.com/api/project/")
       .then((response) => {
         setProjects(response.data.projects);
         setIsLoading(false);
